@@ -1,0 +1,8 @@
+<h1>Tite du gossip : <%= @gossip.title %></h1>
+
+<p> voici son contenu :</p>
+<p><%= @gossip.content %></p>
+<hr></hr>
+<p><%= @gossip.user.first_name %>
+<%= @gossip.user.last_name %></p>
+<p><%= @gossip.user.city.name %></p>

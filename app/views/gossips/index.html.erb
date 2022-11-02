@@ -1,15 +1,15 @@
-<h1>Bienvenue</h1>
-
-
-  <% @gossips.each do |gossip|%>
-    <a href="/gossips/<%=gossip.id%>">
-      <%= gossip.title%>
-    </a>
-    <p>
-      <%= gossip.content%>
-    </p>
-    <p>
-      <%= gossip.user.first_name%>
-    </p>
-    <%end%>
 </div>
+<h1>Bienvenue</h1>
+<% @gossips.each do |gossip|%>
+  <div class="d-flex justify-content-center row mx-6 row-cols-2">
+<div class="col card mx-5 my-5 container-fluid" style="color:blue">
+  <div class="card">
+    <h5 class="card"><%= gossip.title%></h5>
+    <p class="card"><%= gossip.content%></p>
+    <a href="<%= gossip_path(gossip.id) %>" class="btn btn-primary">voir plus</a>
+    <a href="<%= edit_gossip_path(gossip.id) %>" class="btn btn-info">Editer</a>
+  </div>
+</div>
+</div>
+<%end%>
+

@@ -1,5 +1,5 @@
 class Gossip < ApplicationRecord
-  belongs_to :user
+  belongs_to :user , optional: true
   has_many :gossip_tags
   has_many :tags, through: :gossip_tags
   validates :title, length: { in: 3..14 }
