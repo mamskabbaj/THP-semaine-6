@@ -1,0 +1,15 @@
+<h1>Bienvenue</h1>
+
+
+  <% @gossips.each do |gossip|%>
+    <a href="/gossips/<%=gossip.id%>">
+      <%= gossip.title%>
+    </a>
+    <p>
+      <%= gossip.content%>
+    </p>
+    <p>
+      <%= gossip.user.first_name%>
+    </p>
+    <%end%>
+</div>
