@@ -13,7 +13,7 @@ class GossipsController < ApplicationController
     @gossips = Gossip.new
   end 
 
-  def create
+    def create
     user = User.find(1)
     @gossip = Gossip.new(title: params[:title], content: params[:content], user_id: user.id)
 
@@ -24,11 +24,6 @@ class GossipsController < ApplicationController
       render(action: 'new')
     end
   end
-
-
-
-  
-
 
   def edit
     @gossips = Gossip.find(params["id"])
