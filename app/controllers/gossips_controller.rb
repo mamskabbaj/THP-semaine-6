@@ -1,4 +1,3 @@
-require 'pry'
 class GossipsController < ApplicationController
   
   def index
@@ -46,9 +45,9 @@ class GossipsController < ApplicationController
   end
 
   def destroy
-  @gossips = Gossip.fin(params["id"])
- @gossips.destroy
-   redirect_to_gossip_path
+    @gossips = Gossip.find(params["id"])
+    @gossips.destroy
+    redirect_to_gossip_path
   end
 
   private

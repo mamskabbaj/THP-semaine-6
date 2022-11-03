@@ -5,5 +5,8 @@ Rails.application.routes.draw do
  
   resources :gossips
   root to: 'gossips#index'
+  
+  resources :sessions
+  
 end
 
